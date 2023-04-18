@@ -12,10 +12,11 @@
 }
 /*start of navigation bar*/
 header {
-    position: absolute;
-    height: 50px;
+    position: fixed;
+    height: 65px;
     width: 100%;
     background: var(--section-black-color);
+    z-index: 2;
 }
 .navigation {
     display: flex;
@@ -41,9 +42,16 @@ header {
 }
 .tab li {
     list-style: none;
-    margin-block: .5em;
-    margin-inline: 1.5em;
-    padding-inline: .5em;
+    margin-block: 1.8em;
+    margin-inline: 1em;
+    border-radius: 20px;
+    padding-inline: 1em;
+    padding-block: .3em;
+    font-weight: 650;
+    border: 3px solid var(--main-color);
+    box-shadow: inset 0 0 0.5em 0 var(--main-color),
+    0 0 0.5em 0 var(--main-color);
+
 }
 .tab li a {
     text-decoration: none;
@@ -61,7 +69,6 @@ header {
 /*start of section*/
 section {
     color: var(--white-color);
-    height: auto;
 }
 section:nth-child(odd) {
     background: var(--section-black-color);
@@ -77,6 +84,8 @@ section:nth-child(even) {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
+    margin-top: 5em;
+    margin-bottom: 2em;
 }
 .carousel-item{
     overflow: hidden;
@@ -100,7 +109,9 @@ section:nth-child(even) {
     margin-inline: .5em;
     box-shadow: inset 0 0 0.5em 0 var(--main-color),
     0 0 0.5em 0 var(--main-color);
+    position: relative;
 }
+
 .wave {
     position: relative;
 }
@@ -125,8 +136,6 @@ section:nth-child(even) {
     color: var(--main-color);
     margin-inline: .5em;
 }
-
-
 /*Quick Section*/
 #tagname {
     margin-top: 1.5em;
@@ -173,16 +182,43 @@ section:nth-child(even) {
     0 0 0.5em 0 var(--main-color);
     position: relative;
 }
-.whyhireme-box:last-child {
-    margin-bottom: 2em;
-}
-
 .whyhireme-medium-box {
     position: absolute;
     height: 75%;
     width: 4em;
     margin: .5em;
     background: var(--main-color);
+    animation: animatedbox 4s ease infinite;
+}
+.whyhireme-medium-box-1st {
+    position: absolute;
+    height: 75%;
+    width: 4em;
+    margin: .5em;
+    background: var(--main-color);
+    animation: animatedbox1 4s ease infinite;
+}
+.whyhireme-box:last-child {
+    margin-bottom: 2em;
+}
+@keyframes animatedbox {
+    50% {
+        right: 77%;
+    }
+    100% {
+        right: 1em;
+    }
+}
+@keyframes animatedbox1 {
+    0% {
+        left: 1em;
+    }
+    50% {
+        left: 77%;
+    }
+    100% {
+        left: 1em;
+    }
 }
 .whyhireme-small-box {
     position: absolute;
@@ -191,12 +227,11 @@ section:nth-child(even) {
     background: var(--main-color); 
     right: 0; 
 }
-
 .left-small {
     left: 0;
 }
 .right {
-    right: 0;
+    right: 1em;
 }
 
 /*third section*/
@@ -269,7 +304,7 @@ section:nth-child(even) {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 .project-box {
     display: flex;
@@ -326,7 +361,6 @@ section:nth-child(even) {
     0 0 0.5em 0 var(--main-color);
 }
 .recent-commission-message p {
-    margin-top: 1em;
     margin-bottom: 2em;
     width: 60%;
 }
@@ -532,6 +566,8 @@ footer {
         display: grid;
         grid-template-columns: repeat(1, auto);
         gap: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;    
     }
     .tab {
         display: none;
@@ -587,6 +623,8 @@ footer {
     }
     .carousel-item img {
         height: 450px;
+    }.footer-box p {
+        font-size: 12px;
     }
 }
   @media screen and (max-width: 600px) {
@@ -650,6 +688,28 @@ footer {
     }
 
   }
+  @media screen and (max-width: 575px) {
+    .circle-box {
+        display: flex;
+        justify-content: center;
+    }
+    .circle {
+        height: 20px;
+        width: 20px;
+    }
+    .circle1 {
+        position: relative;
+        height: 20px;
+        width: 20px;
+    }
+    .circle1::before {
+        content: '';
+        position: absolute;
+        height: 15px;
+        width: 15px;
+    }
+
+  }
   @media screen and (max-width: 544px) {
     .footer-box {
         display: block;
@@ -680,6 +740,12 @@ footer {
     }
     .recent-project-box button {
         left: 3.3rem;
+    }
+    #quick-info-box {
+        font-size: 12px;
+    }
+    .recent-commission-message {
+        font-size: 12px;
     }
 
   }
