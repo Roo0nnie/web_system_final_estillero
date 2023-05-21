@@ -78,7 +78,6 @@ header {
 .active {
     color: var(--section-black-color) !important;
 }
-
 /* format Dislay */
 .alignCenter {
     display: flex;
@@ -102,7 +101,7 @@ header {
 }
 /* top header */
 .top-section {
-    background-image: url(/assets/4.png);
+    background-image: url(/assets/5.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -122,6 +121,7 @@ header {
     color: var(--white-color);
     /* color: rgb(177, 164, 164); */
 }
+
 /* owner-section */
 .owner-section {
     padding: 1rem;
@@ -141,12 +141,16 @@ header {
     margin: 0 50px;
     background-color: transparent;
     overflow: hidden;
+    /* border-radius: 25px; */
 }
 .card{
     width: 300px !important;
     background-color: transparent !important;
-    border: 3px solid var(--main-color);
-
+    border: 3px solid var(--section-masblack-color);
+}
+/* height provide in flip effect */
+div.card.swiper-slide {
+    min-height: 300px;
 }
 .image-content,.card-content {
     display: flex;
@@ -193,51 +197,69 @@ header {
     background:var(--section-lowGray-color);
     color: var(--section-medyoblack-color);
 }
-
-/* My Profile */
-.my-profile {
-    background-image: url(/assets/3.png);
-    background-position: center;
-    background-size: cover;
-    min-height: 100vh;
+/* flip card */
+.flip-content {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+  .flip-card{
     position: relative;
-    padding-top: 1rem;
-}
-.my-profile-pic {
-    width: 90%;
-    height: 350px;
-    border: 3px solid var(--main-color);
-    overflow: hidden;
-    position: relative;
-}
-.my-profile-pic img {
-    height: 100%;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+  }
+  
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+  .flip-card:hover{
+    transform: rotateY(180deg);
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+   .flip-front{
     position: absolute;
-}
-.my-profile-pic::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: var(--main-color);
+    color: #000;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .flip-back{
     position: absolute;
-    content: '';
-    inset: 0;
-    background-color:var(--section-masblack-color);
-    opacity: .5;
-    filter: grayscale(10%);
-    transition: all .5s ease-in-out;
-}
-.my-profile-pic:hover::after{
-    opacity: 0;
-}
-.my-content {
-    position: relative;
-    padding: 1rem;
-}
-.my-content p{
-    color: var(--white-color);
-}
-.my-content button {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: var(--section-lowGray-color);
+    text-align: center;
+    transform: rotateY(180deg);
+  }
+  .flip-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--section-masblack-color);
+  }
+  .card-content button {
     background-color: var(--section-medyoblack-color);
     color: var(--main-color);
     padding-inline: 1.5em;
@@ -247,55 +269,118 @@ header {
     box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
     0 0 0.5em 0 var(--white-color);
     cursor: pointer;
+    margin-bottom: 2rem;
     transition: all .3s ;
    
 }
-.my-content button:hover {
+.card-content button:hover {
     background:var(--section-lowGray-color);
     color: var(--section-medyoblack-color);
 }
-/* My Gallery */
-.my-gallery {
-    background-color: var(--section-masblack-color);
-    min-height: 100vh;
-    padding-block: 1rem;
+/* flip icon */
+
+.bi-chat-square-text-fill,.bi-envelope-at-fill,.bi-globe,.bi-share-fill {
+    font-size: 6rem;
+    color: var(--section-masblack-color);
 }
-.container-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.flip-description p {
+    font-size: 14px;
+    color: var(--section-medyoblack-color);
     text-align: center;
-    margin: 20px 40px 0px 20px;
 }
-.container-box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 2rem;
-}
-.dream {
-    display: flex;
-    flex-direction: column;
-    width: 32.5%;
-    
-}
-.dream img {
-    position: relative;
-    width: 100%;
-    margin-bottom: 10px;
-    transition: all .5s ease-in-out;
-    position: relative;
-    transition: .5s ease-in-out;
-}
-.dream img:hover {
-    padding: .5rem;
-    border: 2px solid var(--main-color);
-    box-shadow: inset 0 0 0.5em 0 var(--main-color),
-    0 0 0.5em 0 var(--main-color);
+.flip-description p a {
+    text-decoration: none;
+    color: var(--section-medyoblack-color);
 }
 
-/*footer*/
+/* contact section */
+.contact-page {
+    background-image: url(/assets/6.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    padding-block: 1rem;
+
+}
+.contact-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.need-validation {
+    width: 60%;
+}
+.col-sm-12 input {
+    width: 100%;
+    margin: .3rem 0;
+}
+.col-sm-12 textarea {
+    width: 100%;
+    margin: .3rem 0;
+}
+input.btn {
+    background-color: var(--section-medyoblack-color);
+    color: var(--main-color);
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+    transition: all .3s ;
+    margin-block: 1rem;
+}
+input.btn:hover {
+    background:var(--section-lowGray-color);
+    color: var(--section-medyoblack-color);
+}
+.contac-link h4 {
+    text-align: center;
+}
+.contact-icon-link  i {
+    padding: 0 1rem;
+    color: var(--main-color);
+    font-size: 22px;
+}
+
+/* location */
+.location {
+    padding: 1rem;
+    background-color: var(--section-masblack-color);
+    min-height: 100vh;
+    padding-bottom: 5rem;
+}
+.search-location {
+    margin-bottom: 2rem;
+}
+.search-location button {
+    background-color: var(--section-medyoblack-color);
+    color: var(--main-color);
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+    transition: all .3s ;
+    margin-inline: 1rem;
+}
+.search-location button:hover {
+    background:var(--section-lowGray-color);
+    color: var(--section-medyoblack-color);
+}
+.search-location input {
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+}
+
+/* Footer */
 footer {
     background: var(--section-medyoblack-color);
     padding-top: 2.5em;
@@ -329,6 +414,3 @@ footer {
     text-decoration: none;
     color: var(--section-lowGray-color);
 }
-
-
-

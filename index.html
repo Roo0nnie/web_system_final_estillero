@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="/js/bootstrap.bundle.min.js"></script>
+    <script defer src="/js/index.js"></script>
     <link rel="stylesheet" href="/css/index.css">
+
+    <!-- Swiper -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- icon js -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
 
     <title>Final Project</title>
 </head>
@@ -21,24 +32,30 @@
                     <img src="/assets/logo.png" alt="">
                 </div>
                 <div class="tab">
-                        <li id="active"><a href="">Home</a></li>
+                        <li id="active"><a class="active">Home</a></li>
+                        <li><a href="#">Porfolio</a></li>
                         <li><a href="/html/about.html">About</a></li>
-                        <li><a href="">Porfolio</a></li>
-                        <li><a href="">Blog</a></li>
                         <li><a href="">Contact</a></li>
                 </div>
             </nav> <!--end of navigation bar-->
         </div>
     </header>
-    <section class="first-section"> <!--start of grid-->
+    <section class="animation-section background1"> <!--start of grid-->
         <div class="container grid">
             <div class="left-description">
-                <h1>I'm Ronnie F. Estillero</h1>
+                <!-- <div class="animation-name">
+                    <span class="text first-text text-white">I'm</span>
+                    <span class="text second-text"></span>
+                </div> -->
                 <p>A College & Full Stack Developer Student</p>
-                <div class="bday">
-                    <li>09</li>
-                    <li>08</li>
-                    <li>01</li>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="icon-grid">
+                            <a href="https://www.facebook.com/ronnie.estillero.79"><i class="bi bi-facebook"></i></a>
+                            <a href="https://github.com/Roo0nnie"><i class="bi bi-github"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
@@ -47,88 +64,127 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="icon-grid">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-github"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <div class="right-image">
-                <div id="image" class="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active" data-bs-interval="10000" align="center">
-                        <img src="/assets/carousel11.png">
-                      </div>
-                      <div class="carousel-item" data-bs-interval="2000" align="center">
-                        <img src="/assets/carousel22.png">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#image" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#image" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
-                  </div>
+                <div class="carousel">
+                    <img src="/assets/Ronie.jpg" alt="">
+                </div>
             </div>
         </div>
     </section> <!--end of grid-->
-    <section class="second-section">
+    <section class="animation-section quick-background">
         <div class="container">
             <div class="quick-info">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 align="center" id="tagname">Quick Information</h3>
-                        <div class="table-responsive">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <div class="quick-info-box" align="center">
-                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#description" id="quick-info-button">
-                                                Description
-                                            </button>
-                                            <div class="collapse quick-info-message" id="description">
-                                                <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                        <h3 align="center" id="tagname">Quick <span class="tagnameColor">Information</span></h3>
+                        <div class="slide-container swiper">
+                            <div class="slide-content">
+                                <div class="card-wrapper swiper-wrapper">
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                                            <div class="card-image">
+                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <div class="quick-info-box" align="center">
-                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#certificate" id="quick-info-button">
-                                                Certificate
-                                            </button>
-                                            <div class="collapse quick-info-message" id="certificate">
-                                                <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                        <div class="card-content">
+                                            <h2 class="name">Description</h2>
+                                            <div class="collapse" id="description">
+                                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                            </div>
+                                            <button class="button" data-bs-toggle="collapse" data-bs-target="#description">View More</button> 
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                                            <div class="card-image">
+                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <div class="quick-info-box" align="center">
-                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#aboutme" id="quick-info-button">
-                                                About Me
-                                            </button>
-                                            <div class="collapse quick-info-message" id="aboutme">
-                                                <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                        <div class="card-content">
+                                            <h2 class="name">Certificate</h2>
+                                            <div class="collapse" id="certificate">
+                                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                            </div>
+                                            <button class="button" data-bs-toggle="collapse" data-bs-target="#certificate">View More</button> 
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                                            <div class="card-image">
+                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
-                                    </td>
-                                    <td>
-                                        <div class="quick-info-box" align="center">
-                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#skill" id="quick-info-button">
-                                                Skill
-                                            </button>
-                                            <div class="collapse quick-info-message" id="skill">
-                                                <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                        <div class="card-content">
+                                            <h2 class="name">Skill</h2>
+                                            <div class="collapse" id="skill">
+                                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                            </div>
+                                            <button class="button" data-bs-toggle="collapse" data-bs-target="#skill">View More</button> 
+                                        </div>
+                                    </div>
+                                    <div class="card swiper-slide">
+                                        <div class="image-content">
+                                            <span class="overlay"></span>
+                                            <div class="card-image">
+                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
                                             </div>
                                         </div>
-                                    </td>
-                                </tr>
-                            </table>
+                                        <div class="card-content">
+                                            <h2 class="name">Service</h2>
+                                            <div class="collapse" id="service">
+                                                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                            </div>
+                                            <button class="button" data-bs-toggle="collapse" data-bs-target="#service">View More</button> 
+                                        </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                       
+                           
                         </div>
+                        <!-- <div class="wrapper">
+                            <div class="quick-info-box" align="center">
+                                <button type="button" data-bs-toggle="collapse" data-bs-target="#description" id="quick-info-button">
+                                    Description
+                                </button>
+                                <div class="collapse quick-info-message" id="description">
+                                    <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                </div>
+                            </div>
+
+                            <div class="quick-info-box" align="center">
+                                <button type="button" data-bs-toggle="collapse" data-bs-target="#certificate" id="quick-info-button">
+                                    Certificate
+                                </button>
+                                <div class="collapse quick-info-message" id="certificate">
+                                    <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                </div>
+                            </div>
+             
+                            <div class="quick-info-box" align="center">
+                                <button type="button" data-bs-toggle="collapse" data-bs-target="#aboutme" id="quick-info-button">
+                                    About Me
+                                </button>
+                                <div class="collapse quick-info-message" id="aboutme">
+                                    <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                </div>
+                            </div>
+               
+                            <div class="quick-info-box" align="center">
+                                <button type="button" data-bs-toggle="collapse" data-bs-target="#skill" id="quick-info-button">
+                                    Skill
+                                </button>
+                                <div class="collapse quick-info-message" id="skill">
+                                    <p id="quick-info-box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                </div>
+                            </div>
+                        </div> -->   
                     </div>
                 </div>
             </div>
@@ -136,7 +192,9 @@
                 <div class="row d-flex justify-content-evenly">
                     <div class="col-sm-5">
                         <div class="whyhireme-box">
-                            <div class="whyhireme-medium-box-1st"></div>
+                            <div class="whyhireme-medium-box-1st"><span class="material-symbols-outlined">
+                                javascript
+                                </span></div>
                             <div class="whyhireme-small-box"></div>
                         </div>
                         <div class="whyhireme-box">
@@ -152,18 +210,18 @@
                         <h3 id="tagname">Why Hire Me For Your Project?</h3>
                         <div class="whyhireme-message">
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima quisquam commodi quod illum similique libero a maiores ipsa repellendus in consequuntur suscipit velit voluptatem quaerat, hic dolor nobis sequi rem.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni reprehenderit odit corrupti numquam veritatis libero, sit mollitia at eum velit molestiae eligendi doloremque id officia odio tempore modi optio aspernatur.</p>
+                           
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="third-section">
+    <section class="animation-section recent-background">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h3 align="center" id="tagname">Recent Projects</h3></div>
+                    <h3 align="center" id="tagname">Recent <span class="tagnameColor">Projects</span></h3></div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
@@ -209,10 +267,10 @@
             </div>
         </div>
     </section>
-    <section class="fourth-section">
+    <section class="animation-section quick-background">
         <div class="container">
             <div class="row">
-                <h3 align="center" id="tagname">Recent Commission</h3>
+                <h3 align="center" id="tagname">Recent <span class="tagnameColor">Commission</span></h3>
             </div>
                 <div class="recent-commission">
                     <div class="project1">
@@ -247,182 +305,247 @@
             </div>
         </div>
     </section>
-    <section class="last-section">
+    <section class="animation-section customer-background">
         <div class="container">
             <div class="row">
-                <h3 align="center" id="tagname">Get In Touch With Me!</h3>
-                <div class="col-sm-5">
-                    <div class="get-update">
-                        <div class="circle-box">
-                            <div class="circle"></div>
-                            <div class="circle1"></div>
-                            <div class="circle1"></div>
-                            <div class="circle1"></div>
-                            <div class="circle1"></div>
+                <h3 align="center" id="tagname">Customer's <span class="tagnameColor">Review</span></h3>
+            </div>
+            <div class="slide-container-review swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper-review swiper-wrapper">
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="description">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#description">Message</button> 
+                            </div>
                         </div>
-                        
-                            <h5 align="center">Don't Miss A Single Drop!</h5>
-                            <div class="get-update-input d-flex justify-content-center">
-                                <input style="display:block" type="text" placeholder="Email.." required/>
-                            </div>
-                            <div class="get-update-btn d-flex justify-content-center">
-                                <button type="button">Subscribe</button>
-                            </div>
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    <div class="get-update box">
-                        <h5 align="center">Your Feedback</h5>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="textarea">
-                                    <textarea>Your message here..</textarea>
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="get-feedback-input">
-                                    <input style="display:block" type="text" placeholder="Your name.." required/>
-                                    <input style="display:block" type="text" placeholder="Subject.." required/>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="review6">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
                                 </div>
-                                <div class="get-feedback d-flex justify-content-center">
-                                    <button type="button">Submit</button>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#review6">Message</button> 
+                            </div>
+                        </div>
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
                                 </div>
+                            </div>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="review5">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#review5">Message</button> 
+                            </div>
+                        </div>
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="review4">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#review4">Message</button> 
+                            </div>
+                        </div>
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="review3">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#review3">Message</button> 
+                            </div>
+                        </div>
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="review2">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#review2">Message</button> 
+                            </div>
+                        </div>
+                        <div class="card-review swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay-review"></span>
+                                <div class="card-image">
+                                    <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                </div>
+                            </div>
+                            <div class="card-content-review d-flex justify-content-center flex-column">
+                                <h2 class="name-review d-flex justify-content-center">Juan Dela Cruz</h2>
+                                <div class="collapse" id="review1">
+                                    <p class="description-review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, cum distinctio! Accusantium corporis, sed omnis eius, beatae animi minus ad porro nihil vero tempora consectetur incidunt quam suscipit fugit minima.</p>
+                                    <div class="icon-review d-flex justify-content-center">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-half"></i>
+                                    </div>
+                                    <div class="link-review mb-2 d-flex justify-content-center">
+                                        <a href=""><i class="bi bi-facebook"></i></a>
+                                        <a href=""><i class="bi bi-github"></i></a>
+                                        <a href=""><i class="bi bi-instagram"></i></a>
+                                    </div>
+                                </div>
+                                <button class="button-review" data-bs-toggle="collapse" data-bs-target="#review1">Message</button> 
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="review">
-        <div class="container">
-            <div class="row">
-                <h3 align="center" id="tagname">Customer's Review</h3>
-            </div>
-            <div class="table-responsive">
-                <table>
-                    <tr>
-                        <td>
-                            <div class="review-box">
-                                <div class="customer-review">
-                                    <div class="image">
-                                        <img src="/assets/Ronie.jpg" alt="">
-                                    </div>
-                                    <div class="name-rate">
-                                        <h6>Juan Dela Cruz</h6>
-                                        <div class="rate">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customer-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consectetur adipisicing elit. Corporis voluptas libero, similique assumenda.</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="review-box">
-                                <div class="customer-review">
-                                    <div class="image">
-                                        <img src="/assets/Ronie.jpg" alt="">
-                                    </div>
-                                    <div class="name-rate">
-                                        <h6>Juan Dela Cruz</h6>
-                                        <div class="rate">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customer-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consectetur adipisicing elit. Corporis voluptas libero, similique assumenda.</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="review-box">
-                                <div class="customer-review">
-                                    <div class="image">
-                                        <img src="/assets/Ronie.jpg" alt="">
-                                    </div>
-                                    <div class="name-rate">
-                                        <h6>Juan Dela Cruz</h6>
-                                        <div class="rate">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customer-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consectetur adipisicing elit. Corporis voluptas libero, similique assumenda.</p>
-                                </div>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="review-box">
-                                <div class="customer-review">
-                                    <div class="image">
-                                        <img src="/assets/Ronie.jpg" alt="">
-                                    </div>
-                                    <div class="name-rate">
-                                        <h6>Juan Dela Cruz</h6>
-                                        <div class="rate">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-half"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customer-message">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.amet consectetur adipisicing elit. Corporis voluptas libero, similique assumenda.</p>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+        <div class="col-sm-12">
+            <div class="get-update">
+                <form action="index.html" method="POST">
+                    <div class="get-update-input d-flex justify-content-center">
+                        <input type="text" placeholder="Email.." required/>
+                    </div>
+                    <div class="get-update-btn d-flex justify-content-center">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
     <footer>
-        <div class="container">
+        <div class="animation-section">
             <div class="footer-box">
                 <div class="quick-navigation">
-                    <h6>Location</h6>
+                    <h6>Find <span class="footer-link">US</span></h6>
                     <p><a href="#">Gubat, Sorsogon</a></p>
                 </div>
                 <div class="quick-navigation">
-                    <h6>Quick Links</h6>
+                    <h6>Quick <span class="footer-link">LINKS</span></h6>
                     <p><a href="">About</a></p>
                     <p><a href="">Porfolio</a></p>
-                    <p><a href="">Blog</a></p>
                     <p><a href="">Contact</a></p>
                 </div>
                 <div class="quick-navigation">
-                    <h6>Contact</h6>
+                    <h6>Contact <span class="footer-link">US</span></h6>
                     <p>ronniefigueras.estillero@bicol-u.edu.ph</p>
+                    <p>ronniewarrior09@gmail.com</p>
                     <p>+091 0351 0803</p>
                     <p>+096 7350 2679</p>
                 </div>
                 <div class="quick-navigation">
-                    <h6>Follow Us</h6>
-                    <p><a href="#">Facebook</a></p>
-                    <p><a href="#">Instagram</a></p>
-                    <p><a href="#">github</a></p>
+                    <h6>Follow <span class="footer-link">HERE</span></h6>
+                    <p><a href="#"><i class="bi bi-facebook my-2"></i> Facebook</a></p>
+                    <p><a href="#"><i class="bi bi-instagram my-2"></i> Instagram</a></p>
+                    <p><a href="#"><i class="bi bi-github my-2"></i> github</a></p>
                 </div>
             </div>
-            <div class="line"></div>
                 <div class="copy-reserve">
                     <p>All Copyright Reserved @2023 by <span id="copyright">Ronnie F. Estillero </span>||<span id="copyright"> BSIT-2B</span></p>
                 </div>
