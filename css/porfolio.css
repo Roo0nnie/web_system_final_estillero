@@ -1,0 +1,631 @@
+:root {
+    --section-medyoblack-color:#101010;
+    --section-masblack-color:#202020;
+    --section-medyoGray-color:#3f3d37;
+    --section-lowGray-color:#7a7b6c;
+    --white-color:#ffffff;
+     --main-color:#df9b0a; 
+     --section-black-color:#000000;
+     --backgroun-transparent: hsl(0 0% 0% / .6);
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*start of navigation bar*/
+header {
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    background:var(--backgroun-transparent);
+    z-index: 2;
+    box-shadow: 0px 10px 33px 0px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 0px 10px 33px 0px rgba(0,0,0,0.49);
+    -moz-box-shadow: 0px 10px 33px 0px rgba(0,0,0,0.49);
+}
+.navigation {
+    display: flex;
+    color: var(--white-color);
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.menu {
+    display: none;
+}
+.logo img {
+    height: 90px;
+    width: 90px;
+    margin-top: -1.2em;
+}
+.tab {
+    display: flex;
+    color: var(--white-color);
+    font-weight: 650;
+    margin-top: -1em;
+}
+.tab li {
+    list-style: none;
+    margin-block: 3rem;
+    margin-inline: 1em;
+    border-radius: 20px;
+    padding-inline: 1em;
+    padding-block: .3em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--main-color);
+    transition: all ease-in-out .5s;
+}
+.tab li:hover {
+    background-color: var(--white-color);
+}
+.tab li a {
+    text-decoration: none;
+    color: var(--white-color);
+    transition: all ease-in-out .5s;
+}
+.tab li a:hover {
+    color: var(--section-black-color);
+}
+
+#active {
+    border: 2px solid var(--white-color);
+    border-radius: 15px;
+    background: var(--white-color);
+}
+.active {
+    color: var(--section-black-color) !important;
+}
+
+/* format Dislay */
+.alignCenter {
+    display: flex;
+    justify-content: center;
+}
+#tagname {
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    font-weight: 700;
+    color: var(--white-color);
+    position: relative;
+}
+.tagnameColor {
+    color: var(--main-color);
+}
+#sub-tagname {
+    margin-bottom: 2em;
+    font-weight: 700;
+    color: var(--white-color);
+    position: relative;
+    font-size: 1.5rem;
+}
+/* format Dislay */
+.alignCenter {
+    display: flex;
+    justify-content: center;
+}
+#tagname {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 700;
+    color: var(--white-color);
+}
+.tagnameColor {
+    color: var(--main-color);
+}
+/* top header */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-bottom: 4em;
+}
+/* top header */
+.top-section {
+    background-image: url(/assets/7.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.about-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.about-letter {
+    font-size: 4rem;
+    font-weight: 700;
+    border: 4px solid var(--main-color);
+    padding: 1.5rem 4rem;
+    color: var(--white-color);
+    /* color: rgb(177, 164, 164); */
+}
+
+/* Donload CV */
+.download-cv a button {
+    background-color: var(--section-medyoblack-color);
+    color: var(--main-color);
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+    transition: all .3s ;
+    margin-block: 1rem;
+}
+.download-cv a button:hover {
+    background:var(--section-lowGray-color);
+    color: var(--section-medyoblack-color);
+}
+/* Portfolio */
+.portfolio-container {
+    background-color: var(--section-masblack-color);
+    min-height: 100vh;
+    padding: 1rem;
+
+}
+/* objective */
+.objective {
+    width: 70ch;
+    text-align: center;
+    color: var(--white-color);
+}
+/* Picture profile */
+.my-profile-pic {
+    margin-top: 2rem;
+    width: 90%;
+    height: 350px;
+    border: 3px solid var(--main-color);
+    /* overflow: hidden; */
+    position: relative;
+}
+.my-profile-pic img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.my-profile-pic::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-color:var(--section-masblack-color);
+    opacity: .5;
+    filter: grayscale(10%);
+    transition: all .5s ease-in-out;
+}
+.my-profile-pic:hover::after{
+    opacity: 0;
+}
+.overlay-picture {
+    position: absolute;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 100%;
+    top: -1rem;
+    left: -1rem;
+}
+.my-content {
+    position: relative;
+    padding: 1rem;
+}
+.my-content p{
+    color: var(--white-color);
+}
+.my-content button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--section-medyoblack-color);
+    color: var(--main-color);
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+    transition: all .3s ;
+   
+}
+.my-content button:hover {
+    background:var(--section-lowGray-color);
+    color: var(--section-medyoblack-color);
+}
+
+  /* THE CARD HOLDS THE FRONT AND BACK FACES */
+  .flip-card{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    margin: .5rem;
+  }
+  
+  /* THE PSUEDO CLASS CONTROLS THE FLIP ON MOUSEOVER AND MOUSEOUT */
+  .flip-card:hover{
+    transform: rotateY(180deg);
+  }
+  
+  /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
+   .flip-front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+    background: var(--main-color);
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .flip-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background: var(--section-lowGray-color);
+    text-align: center;
+    transform: rotateY(180deg);
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+  }
+  .personal-details {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+  .card-content p {
+    color: var(--section-masblack-color);
+  }
+
+  /* Portfolio Skill */
+  .profolio-skill {
+    background-image: url(/assets/8.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+/* Swiper slide */
+  .slide-container {
+    max-width: 95%;
+    width: 100%;
+    padding: 0px 20x;
+}
+.slide-content{
+    margin: 0 50px;
+    background-color: transparent;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card{
+    width: 300px;
+    border-radius: 25px;
+    background-color: var(--section-lowGray-color);
+}
+.slide-container-review {
+    max-width: 95%;
+    width: 100%;
+    padding: 0px 20x;
+}
+.slide-content-review {
+    margin: 0 50px;
+    background-color: transparent;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card-review {
+    width: 300px;
+    background-color: var(--section-lowGray-color);
+}
+.image-content,.card-content-swiper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    border-radius: 25px;
+
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--main-color);
+    border-radius: 25px;
+}
+.overlay::after,.overlay::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40x;
+    width: 40px;
+ 
+}
+.overlay::after {
+    position: absolute;
+    border-radius: 0 25px 0 0;
+}
+
+
+.overlay-review::after {
+    position: absolute;
+    
+}
+.card-image {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    border: 3px solid var(--white-color);
+}
+.card-image.card-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--section-medyoblack-color);
+}
+.description {
+    font-size: 14px;
+    color: var(--white-color);
+    text-align: center;
+}
+.button {
+    background-color: var(--section-medyoblack-color);
+    color: var(--main-color);
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+    transition: all .3s ;
+}
+.button:hover {
+    background:var(--section-lowGray-color);
+    color: var(--section-medyoblack-color);
+}
+
+
+/*third section*/
+.recent-background {
+    background-color: var(--section-masblack-color);
+    min-height: 100vh;
+}
+
+.recent-project-cover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 5em;
+}
+.recent-project-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    border: 2px solid var(--main-color);
+    box-shadow: inset 0 0 0.5em 0 var(--main-color),
+    0 0 0.5em 0 var(--main-color);
+    background-image: url(/assets/Ronie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+.mini-project-margin {
+    margin-inline: 2em;
+    color: var(--white-color);
+}
+.recent-project-box:hover {
+    color: var(--main-color);
+}
+.recent-project-box::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: var(--section-medyoblack-color);
+    z-index: -1;
+    opacity: .7;
+    transition: .5s ease-in-out;
+}
+.recent-project-box:hover::after {
+    opacity: 0;
+}
+.button-recent-project button {
+    bottom: -1.6rem;
+    left: 6.5rem;
+    position: absolute;
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    color: var(--main-color);
+    background-color: var(--section-medyoblack-color);
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    cursor: pointer;
+    transition: all .3s ;
+}
+.button-recent-project button:hover {
+    background:var(--section-lowGray-color);
+    color: var(--section-medyoblack-color);
+}
+
+/* recent commision */
+.quick-background {
+    background-image: url(/assets/9.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    padding: 1rem;
+}
+.recent-commission {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 5em; 
+}
+.project1,.project2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+.project-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    width: 500px;
+    border: 2px solid var(--main-color);
+    box-shadow: inset 0 0 0.5em 0 var(--main-color),
+    0 0 0.5em 0 var(--main-color);
+    position: relative;   
+    background-image: url(/assets/Ronie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    isolation: isolate;
+    position: relative;
+    transition: .5s ease-in-out; 
+}
+.project-box:hover {
+    color: var(--main-color);
+}
+.project-box::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: var(--section-medyoblack-color);
+    z-index: -1;
+    opacity: .7;
+    transition: .5s ease-in-out;
+}
+.project-box:hover::after {
+    opacity: 0;
+}
+.project-box::before {
+    top: 0;
+    left: 0;
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 100%;
+    background: var(--main-color);
+}
+.project-box button {
+    bottom: -1.6rem;
+    left: 10.5rem;
+    position: absolute;
+    border-radius: 20px;
+    padding-inline: 1.5em;
+    padding-block: .5em;
+    font-weight: 650;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--white-color),
+    0 0 0.5em 0 var(--section-lowGray-color);
+}
+.quick-info-box{
+    height: auto;
+    width: 400px;
+    padding: 1em;
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--white-color);
+    margin-inline: 1em;
+    margin-bottom: 1em;
+}
+
+/*footer*/
+footer {
+    background: var(--section-medyoblack-color);
+    padding-top: 2.5em;
+    padding-bottom: 1.5em;
+    color: var(--white-color);
+}
+.footer-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+.footer-link {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.copy-reserve {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+#copyright {
+    color: var(--main-color);
+    font-weight: 600;
+    margin-inline: .5em;
+}
+.quick-navigation p {
+    color: var(--section-lowGray-color);
+}
+.quick-navigation p a {
+    text-decoration: none;
+    color: var(--section-lowGray-color);
+}

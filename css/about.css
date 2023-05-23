@@ -207,7 +207,7 @@ header {
     width: 90%;
     height: 350px;
     border: 3px solid var(--main-color);
-    overflow: hidden;
+    /* overflow: hidden; */
     position: relative;
 }
 .my-profile-pic img {
@@ -226,6 +226,14 @@ header {
 }
 .my-profile-pic:hover::after{
     opacity: 0;
+}
+.overlay-picture {
+    position: absolute;
+    background-color: var(--main-color);
+    height: 100%;
+    width: 100%;
+    top: -1rem;
+    left: -1rem;
 }
 .my-content {
     position: relative;
@@ -295,6 +303,9 @@ header {
     0 0 0.5em 0 var(--main-color);
 }
 
+.page-item {
+    
+}
 /*footer*/
 footer {
     background: var(--section-medyoblack-color);

@@ -22,3 +22,18 @@ var swiper = new Swiper(".slide-content", {
 
     }
   });
+
+  // music
+
+  const musicChanger = document.getElementById('music-stop');
+  
+  musicChanger.addEventListener("click", function() {
+
+    if (musicChanger == "pause_circle") {
+      musicChanger = document.getElementById('music-stop').innerText = "play_circle";
+    } else {
+      musicChanger = document.getElementById('music-stop').innerText = "pause_circle";
+    }
+  
+
+  })
