@@ -8,11 +8,15 @@
      --section-black-color:#000000;
      --backgroun-transparent: hsl(0 0% 0% / .6);
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
+
 /*start of navigation bar*/
 header {
     position: fixed;
@@ -78,6 +82,11 @@ header {
 .active {
     color: var(--section-black-color) !important;
 }
+.menu button {
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--main-color);
+}
 
 /* format Dislay */
 .alignCenter {
@@ -123,7 +132,7 @@ header {
 }
 /* top header */
 .top-section {
-    background-image: url(/assets/7.png);
+    background-image: url(../assets/9.png);
     background-position: center;
     background-size: cover;
     height: 100vh;
@@ -308,7 +317,7 @@ header {
 
   /* Portfolio Skill */
   .profolio-skill {
-    background-image: url(/assets/8.png);
+    background-image: url(../assets/8.png);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -455,17 +464,15 @@ header {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 500px;
     border: 2px solid var(--main-color);
     box-shadow: inset 0 0 0.5em 0 var(--main-color),
     0 0 0.5em 0 var(--main-color);
-    background-image: url(/assets/Ronie.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     isolation: isolate;
     position: relative;
     transition: .5s ease-in-out;
+    overflow: hidden;
 }
 .mini-project-margin {
     margin-inline: 2em;
@@ -506,10 +513,20 @@ header {
     background:var(--section-lowGray-color);
     color: var(--section-medyoblack-color);
 }
+iframe {
+    position: absolute;
+    top: -1rem;
+    bottom: 0;
+    left: -2rem;
+    right: 0;
+    z-index: -1;
+    width: 120%;
+    height: 120%;
+}
 
 /* recent commision */
 .quick-background {
-    background-image: url(/assets/9.png);
+    background-image: url(../assets/9.png);
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -541,7 +558,7 @@ header {
     box-shadow: inset 0 0 0.5em 0 var(--main-color),
     0 0 0.5em 0 var(--main-color);
     position: relative;   
-    background-image: url(/assets/Ronie.jpg);
+    background-image: url(../assets/Ronie.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     isolation: isolate;
@@ -628,4 +645,76 @@ footer {
 .quick-navigation p a {
     text-decoration: none;
     color: var(--section-lowGray-color);
+}
+
+@media screen and (max-width: 1000px) {
+    /* For mobile phones: */
+    .menu {
+        display: none;
+    }
+    .left-description h1 {
+        font-size: 1.5em;
+    }
+    .left-description p {
+        font-size: .7em;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    /* For mobile phones: */
+    .menu {
+        display: block;
+        margin-top: 2rem;
+        margin-inline: 2rem;
+    }
+    
+    .logo img {
+        position: absolute;
+        display: block;
+        left: -7rem;
+        top: 2rem;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        gap: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;    
+    }
+    .tab {
+        display: none;
+    }
+    .left-description {
+        display: flex;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 2em;
+        color: var(--main-color);
+    }
+    .menu:hover {
+        text-shadow: 0 0 0.125em var(--main-color),
+        0 0 0.45em var(--main-color);
+    }
+    
+    .left-description h1 {
+        margin-top: 2em;
+        font-size: 2em;
+    }
+    .left-description p {
+        font-size: 1em;
+    }
+    .wave {
+        display: none;
+    }
+    .footer-box p {
+        font-size: 12px;
+    }
+    .left-description {
+        margin-top: 2rem;
+    }
 }

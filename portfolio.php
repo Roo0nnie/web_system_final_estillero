@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
+
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script defer src="/js/porfolio.js"></script>
-    <link rel="stylesheet" href="/css/porfolio.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script defer src="./js/porfolio.js"></script>
+    <link rel="stylesheet" href="./css/porfolio.css">
 
     <!-- Swiper -->
     <link
@@ -20,18 +27,30 @@
     <title>Porfolio</title>
 </head>
 <body>
-    <header>
+<header>
+        <div class="dropdown menu">
+            <button class="" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-list"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.php">Home</a></li>
+                <li><a class="dropdown-item" href="./portfolio.php">Profolio</a></li>
+                <li><a class="dropdown-item" href="./about.php">About</a></li>
+                <li><a class="dropdown-item" href="./contact.php">Contact</a></li>
+                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            </ul>
+        </div>
         <div class="container">
             <nav class="navigation"> <!--Start of navigation bar-->
-                <div class="menu"><i class="bi bi-list"></i></div>
                 <div class="logo">
-                    <img src="/assets/logo.png" alt="">
+                <a href="./index.php"> <img src="./assets/logo.png" alt=""></a>
                 </div>
                 <div class="tab">
-                    <li><a href="/index.html">Home</a></li>
-                    <li id="active"><a class="active">Portfolio</a></li>
-                    <li><a href="/html/about.html">About</a></li>
-                    <li><a href="/html/contact.html">Contact</a></li>
+                        <li><a href="./portfolio.php">Home</a></li>
+                        <li id="active"><a class="active">Portfolio</a></li>
+                        <li><a href="./about.php">About</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                 </div>
             </nav> <!--end of navigation bar-->
         </div>
@@ -59,7 +78,7 @@
                         <div class="col-md-7 my-picture">
                             <div class="my-profile-pic">
                                 <span class="overlay-picture"></span>
-                                <img src="/assets/pic7.jpg" alt="">
+                                <img src="./assets/pic7.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-md-5 my-content">
@@ -182,7 +201,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about3.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -197,7 +216,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about1.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -212,7 +231,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about5.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -227,7 +246,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about4.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -253,7 +272,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about6.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -268,7 +287,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about7.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -283,7 +302,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about5.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -298,7 +317,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about8.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -321,7 +340,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about2.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -336,7 +355,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about9.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -351,7 +370,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about10.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -366,7 +385,7 @@
                                         <div class="image-content">
                                             <span class="overlay"></span>
                                             <div class="card-image">
-                                                <img src="/assets/Ronie.jpg" alt="" class="card-img">
+                                                <img src="./assets/about11.png" alt="" class="card-img">
                                             </div>
                                         </div>
                                         <div class="card-content-swiper">
@@ -395,40 +414,53 @@
                 <div class="col-sm-12">
                     <div class="recent-project-cover">
                         <div class="recent-project-box">
+                            <div class="contact-foooter">
+                                <iframe src="https://www.youtube.com/embed/bo5UngFtG-0?autoplay=1&controls=0&mute=1&loop=1"></iframe>
+                                </div>
                             <h3 id="tagname">Mini Project 1</h3>
-                            <div class="collapse" id="miniproject">
+                             <!--  <div class="collapse" id="miniproject">
                                 <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
                             </div>
                             <div class="button-recent-project">
                                 <button type="button" data-bs-toggle="collapse" data-bs-target="#miniproject">Show Information</button>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="recent-project-box">
-                            <h3 id="tagname">Calculator in Java</h3>
-                            <div class="collapse" id="calculator">
+                            <div class="contact-foooter">
+                                <iframe src="https://www.youtube.com/embed/2Zpgwveh3FQ?playlist=2Zpgwveh3FQ&autoplay=1&fs=0&controls=0&disablekb=1&mute=1&loop1"></iframe>
+                                    </div>
+                                <h3 id="tagname">Calculator in Java</h3>
+                                <!--  <div class="collapse" id="miniproject">
+                                    <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                </div>
+                                <div class="button-recent-project">
+                                    <button type="button" data-bs-toggle="collapse" data-bs-target="#miniproject">Show Information</button>
+                                </div> -->
+                            </div>
+                        <div class="recent-project-box">
+                            <div class="contact-foooter">
+                            <iframe src="https://www.youtube.com/embed/QqMe_6MSBsw?playlist=QqMe_6MSBsw&autoplay=1&controls=0&disablekb=1&mute=1&loop1"></iframe>
+                            
+                                </div>
+                                <h3 id="tagname">Chat App</h3>
+                                 <!-- <div class="collapse" id="miniproject">
+                                    <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                                </div>
+                                <div class="button-recent-project">
+                                    <button type="button" data-bs-toggle="collapse" data-bs-target="#miniproject">Show Information</button>
+                                </div> -->
+                            </div>
+                        <div class="recent-project-box">
+                            <div class="contact-foooter">
+                                <iframe src="https://www.youtube.com/embed/O0_ZVcCdmmU?playlist=O0_ZVcCdmmU&autoplay=1&controls=0&disablekb=1&mute=1&loop=1"></iframe>
+                            </div>
+                            <h3 id="tagname">C Class Record</h3>
+                             <!--  <div class="collapse" id="miniproject">
                                 <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
                             </div>
                             <div class="button-recent-project">
-                                <button type="button" data-bs-toggle="collapse" data-bs-target="#calculator">Show Information</button>
-                            </div>
-                        </div>
-                        <div class="recent-project-box">
-                            <h3 id="tagname">Inventory System</h3>
-                            <div class="collapse" id="inventory">
-                                <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
-                            </div>
-                            <div class="button-recent-project">
-                                <button type="button" data-bs-toggle="collapse" data-bs-target="#inventory">Show Information</button>
-                            </div>
-                        </div>
-                        <div class="recent-project-box">
-                            <h3 id="tagname">C++ System</h3>
-                            <div class="collapse" id="c++">
-                                <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
-                            </div>
-                            <div class="button-recent-project">
-                                <button type="button" data-bs-toggle="collapse" data-bs-target="#c++">Show Information</button>
-                            </div>
+                                <button type="button" data-bs-toggle="collapse" data-bs-target="#miniproject">Show Information</button>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -440,30 +472,27 @@
             <div class="row">
                 <h3 align="center" id="tagname">Recent <span class="tagnameColor">Commission</span></h3>
             </div>
-                <div class="recent-commission">
-                    <div class="project1">
-                        <div class="project-box">
-                            <h3 id="tagname">Project 1</h3>
-                            <div class="collapse" id="project1">
-                                <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
-                            </div>
-                            <div class="button-recent-project">
-                                <button type="button" data-bs-toggle="collapse" data-bs-target="#project1">Access Here</button>
-                            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="recent-project-cover">
+                        <div class="recent-project-box">
+                            <div class="contact-foooter">
+                                <iframe src="https://www.youtube.com/embed/MpUtN27VK8A?playlist=MpUtN27VK8A&autoplay=1&controls=0&disablekb=1&mute=1&loop=1"></iframe>
+                                </div>
+                            <h3 id="tagname">E-commerce Website</h3>
+                             
                         </div>
-                    </div>
-                    <div class="project2">
-                        <div class="project-box">
-                            <h3 id="tagname">Project 2</h3>
-                            <div class="collapse" id="project2">
-                                <p id="quick-info-box" class="mini-project-margin">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum eveniet ut magni hic maxime eius deleniti, repellat fuga porro dolorem nostrum fugiat, perferendis labore temporibus, quibusdam consequuntur saepe ab minima?</p>
+                        <div class="recent-project-box">
+                            <div class="contact-foooter">
+                             
+                                <iframe src="https://www.youtube.com/embed/pv-us0gsLXs?playlist=pv-us0gsLXs&autoplay=1&controls=0&disablekb=1&mute=1&loop=1"></iframe>
+                                </div>
+                                <h3 id="tagname">Website Portfolio</h3>
+                                
                             </div>
-                            <div class="button-recent-project">
-                                <button type="button" data-bs-toggle="collapse" data-bs-target="#project2">Access Here</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
     <footer>
@@ -475,9 +504,9 @@
                 </div>
                 <div class="quick-navigation">
                     <h6>Quick <span class="footer-link">LINKS</span></h6>
-                    <p><a href="">About</a></p>
-                    <p><a href="">Porfolio</a></p>
-                    <p><a href="">Contact</a></p>
+                    <p><a href="./about.php">About</a></p>
+                    <p><a href="./portfolio.php">Porfolio</a></p>
+                    <p><a href="./contact.php">Contact</a></p>
                 </div>
                 <div class="quick-navigation">
                     <h6>Contact <span class="footer-link">US</span></h6>
@@ -500,3 +529,12 @@
     </footer>
 </body>
 </html>
+
+<?php 
+} else {
+        header("Location: loginForm.php");
+        exit();
+   }
+   
+    
+    ?>

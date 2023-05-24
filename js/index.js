@@ -48,21 +48,16 @@ var swiper = new Swiper(".slide-content", {
     }
   });
 
-//   Text animation  
 
-const text = document.querySelector(".second-text");
+const textChanger = document.getElementById('viewmore');
+  
+textChanger.addEventListener("click", function() {
 
-const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = " Ronnie";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = " A Student";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = " A Coder";
-    }, 8000);
-}
+  if (textChanger == "View") {
+    textChanger = document.getElementById('viewmore').innerText = "Read Less";
+  } else {
+    textChanger = document.getElementById('viewmore').innerText = "View More";
+  }
 
-textLoad();
-setInterval(textLoad, 12000);
+
+})

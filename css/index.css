@@ -8,7 +8,6 @@
      --section-black-color:#000000;
      --backgroun-transparent: hsl(0 0% 0% / .6);
 }
-
 * {
     margin: 0px;
     padding: 0px;
@@ -82,35 +81,23 @@ header {
 .active {
     color: var(--section-black-color) !important;
 }
-.animation-name .text {
-    position: relative;
-    color: var(--main-color);
-    font-size: 2.6rem;
+.menu button {
+    border: 3px solid var(--white-color);
+    box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+    0 0 0.5em 0 var(--main-color);
+}
+.animation-name h3 {
+    font-size: 2.5rem;
     font-weight: 700;
+    color: var(--white-color);
 }
-.animation-name .text .first-text {
-    color: var(--section-medyoblack-color);
+.background1 {
+    min-height: 100vh;
+    background-image: url(../assets/7.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
-.text.second-text:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #1A1A1A;
-    border-left:2px solid  var(--white-color);
-    animation: name 4s steps(12) infinite;
-}
-@keyframes name{
-    40%, 60% {
-        left: calc(100% + 4px);
-    }
-    100% {
-        left: 0%;
-    }
-}
-
 /*start of section*/
 .quick-background {
     background-color: var(--section-masblack-color);
@@ -134,12 +121,7 @@ section {
     justify-content: center;
     align-items: center;
 }
-.background1 {
-    min-height: 100vh;
-    background-image: url(/assets/backgournd1.png);
-    background-position: center;
-    background-size: cover;
-}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -156,10 +138,10 @@ section {
     box-shadow: inset 0 0 0.5em 0 var(--white-color),
     0 0 0.5em 0 var(--white-color);
     overflow: hidden;
+    position: relative;
 }
 .carousel img {
-    height: 350px;
-    width: 350px;
+   position: absolute;
 }
 .left-description {
     padding-top: 5rem;
@@ -328,17 +310,15 @@ section {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 500px;
     border: 2px solid var(--main-color);
     box-shadow: inset 0 0 0.5em 0 var(--main-color),
     0 0 0.5em 0 var(--main-color);
-    background-image: url(/assets/Ronie.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     isolation: isolate;
     position: relative;
     transition: .5s ease-in-out;
+    overflow: hidden;
 }
 .mini-project-margin {
     margin-inline: 2em;
@@ -359,6 +339,17 @@ section {
 .recent-project-box:hover::after {
     opacity: 0;
 }
+iframe {
+    position: absolute;
+    top: -1rem;
+    bottom: 0;
+    left: -2rem;
+    right: 0;
+    z-index: -1;
+    width: 120%;
+    height: 120%;
+}
+
 .button-recent-project button {
     bottom: -1.6rem;
     left: 6.5rem;
@@ -383,7 +374,7 @@ section {
 /*fourth section*/
 .recent-background {
     min-height: 100vh;
-    background-image: url(/assets/1.png);
+    background-image: url(../assets/3.png);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -420,7 +411,7 @@ section {
     box-shadow: inset 0 0 0.5em 0 var(--main-color),
     0 0 0.5em 0 var(--main-color);
     position: relative;   
-    background-image: url(/assets/Ronie.jpg);
+    background-image: url(../assets/Ronie.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     isolation: isolate;
@@ -470,10 +461,13 @@ section {
 
 /*last section*/
 .customer-background {
-    background-image: url(/assets/2.png);
+    
+    background-image: url(../assets/2.png);
     background-position: center;
     background-size: cover;
+    min-height: 100vh;
     position: relative;
+
 }
 
 .box {
@@ -613,6 +607,15 @@ footer {
     /* For mobile phones: */
     .menu {
         display: block;
+        margin-top: 2rem;
+        margin-inline: 2rem;
+    }
+    
+    .logo img {
+        position: absolute;
+        display: block;
+        left: -7rem;
+        top: 2rem;
     }
     .grid {
         display: grid;
@@ -641,6 +644,7 @@ footer {
         text-shadow: 0 0 0.125em var(--main-color),
         0 0 0.45em var(--main-color);
     }
+    
     .left-description h1 {
         margin-top: 2em;
         font-size: 2em;
@@ -648,24 +652,11 @@ footer {
     .left-description p {
         font-size: 1em;
     }
-    .bday li {
-        font-size: .8em;
-        padding-inline: 1.5em;
-        padding-block: .5em;
-        margin-inline: .5em;
-        font-size: 1rem;
-    }
     .wave {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2em;
+        display: none;
     }
-    .wave button {
-        margin-top: 4em;
-        font-size: 1em;
-        width: 10em; 
-    }
+
+
     .icon-grid {
         font-size: 2rem;
         margin-top: 7rem;
@@ -677,6 +668,9 @@ footer {
         height: 450px;
     }.footer-box p {
         font-size: 12px;
+    }
+    .left-description {
+        margin-top: 2rem;
     }
 }
   @media screen and (max-width: 600px) {
@@ -904,13 +898,13 @@ footer {
     width: 150px;
     position: relative;
     border-radius: 50%;
-    overflow: hidden;
+
     border: 3px solid var(--white-color);
     box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
     0 0 0.5em 0 var(--white-color);
     border: 3px solid var(--white-color);
 }
-.card-image.card-img {
+.card-image img {
     position: absolute;
     height: 100%;
     width: 100%;

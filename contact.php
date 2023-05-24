@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
+
+    ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +15,10 @@
 
     <!-- bootsrap link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <script src="/js/bootstrap.bundle.min.js"></script>
-    <script defer src="/js/contact.js"></script>
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script defer src="./js/contact.js"></script>
+    <link rel="stylesheet" href="./css/contact.css">
 
     <!-- Swiper -->
     <link
@@ -25,19 +33,31 @@
     <title>Final Project</title>
 </head>
 <body>
-    <header>
+<header>
+        <div class="dropdown menu">
+            <button class="" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-list"></i>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./index.php">Home</a></li>
+                <li><a class="dropdown-item" href="./portfolio.php">Profolio</a></li>
+                <li><a class="dropdown-item" href="./about.php">About</a></li>
+                <li><a class="dropdown-item" href="./contact.php">Contact</a></li>
+                <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            </ul>
+        </div>
         <div class="container">
             <nav class="navigation"> <!--Start of navigation bar-->
-                <div class="menu"><i class="bi bi-list"></i></div>
                 <div class="logo">
-                    <img src="/assets/logo.png" alt="">
+                <a href="./index.php"> <img src="./assets/logo.png" alt=""></a>
                 </div>
                 <div class="tab">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/html/portfolio.html">Porfolio</a></li> 
-                    <li><a href="/html/about.html">About</a></li>
-                    <li id="active"><a class="active">Contact</a></li>
-            </div>
+                        <li><a href="./index.php">Home</a></li>
+                        <li><a href="./portfolio.php">Porfolio</a></li>
+                        <li><a href="./about.php">About</a></li>
+                        <li id="active"><a class="active">Contact</a></li>
+                        <li><a href="logout.php">Logout</a></li>
+                </div>
             </nav> <!--end of navigation bar-->
         </div>
     </header>
@@ -216,7 +236,7 @@
         <h3 align="center" id="tagname">My <span class="tagnameColor">Location</span></h3>
         <div class="container">
             <div class="search-location d-flex">
-                <input type="text" placeholder="Subject" required>
+                <input type="text" placeholder="Search.." required>
                 <button type="button">search</button>
             </div>
             <div class="map">
@@ -233,9 +253,9 @@
                 </div>
                 <div class="quick-navigation">
                     <h6>Quick <span class="footer-link">LINKS</span></h6>
-                    <p><a href="/index.html">Home</a></p>
-                    <p><a href="">Porfolio</a></p>
-                    <p><a href="/html/about.html">About</a></p>
+                    <p><a href="./index.php">Home</a></p>
+                    <p><a href="./portfolio.php">Porfolio</a></p>
+                    <p><a href="./about.php">About</a></p>
                 </div>
                 <div class="quick-navigation">
                     <h6>Contact <span class="footer-link">US</span></h6>
@@ -258,3 +278,12 @@
     </footer>
 </body>
 </html>
+
+<?php 
+} else {
+        header("Location: loginForm.php");
+        exit();
+   }
+   
+    
+    ?>

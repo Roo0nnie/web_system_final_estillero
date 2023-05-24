@@ -1,0 +1,74 @@
+:root {
+  --section-medyoblack-color:#101010;
+  --section-masblack-color:#202020;
+  --section-medyoGray-color:#3f3d37;
+  --section-lowGray-color:#7a7b6c;
+  --white-color:#ffffff;
+   --main-color:#df9b0a; 
+   --section-black-color:#000000;
+   --backgroun-transparent: hsl(0 0% 0% / .6);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/* login background */
+.login-form {
+  background-image: url(../assets/10.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.login-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* image */
+.carousel {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--main-color);
+  box-shadow: inset 0 0 0.5em 0 var(--main-color),
+  0 0 0.5em 0 var(--main-color);
+  overflow: hidden;
+  position: relative;
+}
+.carousel img {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: -3.5rem;
+  left: -3.2rem;
+}
+.button button {
+  color: var(--main-color);
+  position: absolute;
+  margin-top: 2em;
+  border-radius: 20px;
+  padding-inline: 1.5em;
+  padding-block: .5em;
+  font-weight: 650;
+  background-color: var(--section-medyoblack-color);
+  border: 3px solid var(--white-color);
+  box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+  0 0 0.5em 0 var(--white-color);
+  cursor: pointer;
+  transition: all .3s ;
+}
+.button button:hover {
+  background:var(--section-lowGray-color);
+  color: var(--section-medyoblack-color);
+}
+input {
+  border: 3px solid var(--white-color);
+  box-shadow: inset 0 0 0.5em 0 var(--section-masblack-color),
+  0 0 0.5em 0 var(--white-color);
+}
