@@ -179,7 +179,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['name'])) {
     </section>
     <section class="contact-page">
         <div class="container">
-            <h3 align="center" id="tagname">Contact <span class="tagnameColor">Me</span></h3>
+            <h3 align="center" id="tagname">Your <span class="tagnameColor">Feedback</span></h3>
             <div class="map-contact">
                 <div class="contact-form"><!--form start-->
                     <form class="need-validation">
